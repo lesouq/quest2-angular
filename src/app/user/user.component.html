@@ -1,0 +1,24 @@
+<header>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/ 
+    1.6.9/angular.min.js"></script> 
+</header>
+<body ng-app="">
+<div>
+    <img [src]="imageSrc" [alt]="name"/>
+</div>
+<div>
+  <p>FirstName : {{firstName}}</p>
+  <p> Name : {{name}}</p>
+</div>
+<div class="md-form">
+    <input mdbInput type="text" name="text" [(ngModel)]="quote" id="form1" class="form-control">
+    <label for="form1" class=""></label>
+    <p>{{quote}}</p>
+  </div>
+<div>
+  <button type="button" (click)="toogleTag()">Afficher / masquer age</button>
+</div> 
+  <div>
+      <input *ngIf="showMe" [(ngModel)]="age">
+    </div>
+  </body>
